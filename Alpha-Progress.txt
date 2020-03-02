@@ -1,6 +1,8 @@
 Currently a small window that has an egg, one button, and one progress bar. Level up mechanic and background optimization is functioning.
 The egg is clicked and then a creature(veemon) pops out of it.
 A 'Battle' button appears on the bottom right.
+Selection sounds implemented.
+Digibuddy hatched event sound implemented.
 
 TO BE ADDED NEXT:
 	*Express hunger based on creature anim.
@@ -11,9 +13,12 @@ TO BE ADDED NEXT:
 		-Digibuddy turns left right and right depending on mouse position
 		-Eaten food improves Digibuddy hunger along with unlocking more skills
 	*Create a cracking egg animation.
-		-Today
+	As of -3/2/2020 *In Progress*
 	*Create an enemy creature class to fight against.
-		-Today
+	As of -3/2/2020 *In Progress*
+		-Find creature anim and setup paths
+		-Implement the properties and functions of creatures.
+		-Setup Digibuddy VS. creature depening on Digibuddy level		
 		
 	-*START BELOW ONLY WHEN ABOVE IS COMPLETE*-
 		*Create a fight sequence.	
