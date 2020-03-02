@@ -1,4 +1,4 @@
-Currently a small window that has an egg, one button, and one progress bar. Progress bar and background optimization is functioning.
+Currently a small window that has an egg, one button, and one progress bar. Level up mechanic and background optimization is functioning.
 The egg is clicked and then a creature(veemon) pops out of it.
 A 'Battle' button appears on the bottom right.
 
@@ -14,9 +14,10 @@ TO BE ADDED NEXT:
 		-Today
 	*Create an enemy creature class to fight against.
 		-Today
-	*Create a fight sequence.
-        	-*START ONLY WHEN ABOVE IS COMPLETE*
-	*Setup filezilla server off of new PC.
-	*Setup paths and folders in msi builder.
+		
+	-*START BELOW ONLY WHEN ABOVE IS COMPLETE*-
+		*Create a fight sequence.	
+		*Setup filezilla server off of new tower.
+		*Setup paths and folders in msi builder.
 
 
