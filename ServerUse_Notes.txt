@@ -1,0 +1,7 @@
+*USES FOR SERVER*
+FileZilla hosted file share
+	- Updates software after verifying current build on program
+		PUSHING: *Bug fixes
+			 *New DigiBuddies
+			 *New interactable features 
+	- Can offer .msi or .exe downloads directly from a any given hyperlink.
