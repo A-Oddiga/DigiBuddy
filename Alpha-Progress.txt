@@ -21,6 +21,7 @@ TO BE ADDED NEXT:
 		-Setup Digibuddy VS. creature depening on Digibuddy level		
 		
 	-*START BELOW ONLY WHEN ABOVE IS COMPLETE*-
+		*Attain Optiplex 3040 *COMPLETE*
 		*Create a fight sequence.	
 		*Setup filezilla server off of new tower.
 		*Setup paths and folders in msi builder.
