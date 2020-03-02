@@ -1,5 +1,6 @@
 *USES FOR SERVER*
 FileZilla hosted file share
+	- Use https://www.noip.com/free
 	- Updates software after verifying current build on program
 		PUSHING: *Bug fixes
 			 *New DigiBuddies
