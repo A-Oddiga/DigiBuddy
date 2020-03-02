@@ -22,8 +22,9 @@ TO BE ADDED NEXT:
 		
 	-*START BELOW ONLY WHEN ABOVE IS COMPLETE*-
 		*Attain Optiplex 3040 *COMPLETE*
+		*Setup filezilla server hosted on new Optiplex 3040.
+			-Insert HTML doc to verify and compare builds to install application updates.
+		*Setup paths and local folders in msi builder(Advanced Installer).				
 		*Create a fight sequence.	
-		*Setup filezilla server off of new tower.
-		*Setup paths and folders in msi builder.
 
 
