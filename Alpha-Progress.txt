@@ -2,20 +2,21 @@ Currently a small window that has an egg, one button, and one progress bar. Prog
 The egg is clicked and then a creature(veemon) pops out of it.
 A 'Battle' button appears on the bottom right.
 
-*Express hunger based on creature anim.
-	-Hunger decreases as digibuddy is left unattended per hour.
-	-Create hunger animations
-*Randomly creates food in the background to recover digibuddy hunger.
-	-Food appears in transparent rectangles
-	-Digibuddy turns left right and right depending on mouse position
-	-Eaten food improves Digibuddy hunger along with unlocking more skills
-*Create a cracking egg animation.
-	-Today
-*Create an enemy creature class to fight against.
-	-Today
-*Create a fight sequence.
-        -*START ONLY WHEN ABOVE IS COMPLETE*
-*Setup filezilla server off of new PC.
-*Setup paths and folders in msi builder.
+TO BE ADDED NEXT:
+	*Express hunger based on creature anim.
+		-Hunger decreases as digibuddy is left unattended per hour.
+		-Create hunger animations
+	*Randomly creates food in the background to recover digibuddy hunger.
+		-Food appears in transparent rectangles
+		-Digibuddy turns left right and right depending on mouse position
+		-Eaten food improves Digibuddy hunger along with unlocking more skills
+	*Create a cracking egg animation.
+		-Today
+	*Create an enemy creature class to fight against.
+		-Today
+	*Create a fight sequence.
+        	-*START ONLY WHEN ABOVE IS COMPLETE*
+	*Setup filezilla server off of new PC.
+	*Setup paths and folders in msi builder.
 
 
