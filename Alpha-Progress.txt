@@ -10,7 +10,7 @@ TO BE ADDED NEXT:
 		-Create hunger animations
 	*Randomly creates food in the background to recover digibuddy hunger.
 		-Food appears in transparent rectangles
-		-Digibuddy turns left right and right depending on mouse position
+		-Digibuddy turns left right and right depending on mouse position *Complete*
 		-Eaten food improves Digibuddy hunger along with unlocking more skills
 	*Create a cracking egg animation.
 	As of -3/2/2020 *In Progress*
