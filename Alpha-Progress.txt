@@ -6,23 +6,27 @@ Digibuddy hatched event sound implemented.
 
 TO BE ADDED NEXT:
 	*Express hunger based on creature anim.
-		-Hunger decreases as digibuddy is left unattended per hour.
+		-Hunger decreases as digibuddy is left unattended per hour. *In Progress*
+		-Hunger decreases as digibuddy per battle. *Complete*
 		-Create hunger animations
 	*Randomly creates food in the background to recover digibuddy hunger.
-		-Food appears in transparent rectangles
+		-Food appears in transparent rectangles *Complete*
+		-Randomize food and randomize locations in which it appears
 		-Digibuddy turns left right and right depending on mouse position *Complete*
 		-Eaten food improves Digibuddy hunger along with unlocking more skills
 	*Create a cracking egg animation.
 	As of -3/2/2020 *In Progress*
 	*Create an enemy creature class to fight against.
-	As of -3/2/2020 *In Progress*
-		-Find creature anim and setup paths
-		-Implement the properties and functions of creatures.
-		-Setup Digibuddy VS. creature depening on Digibuddy level		
+	As of -3/4/2020 *In Progress*
+		-Find creature anim and setup paths *In Progress*
+		-Implement the properties and functions of creatures. *In Progress*
+		-Setup Digibuddy VS. creature depending on Digibuddy level	
+	*Create new menu displaying all digicreature occurences
+	As of - ... 
 		
 	-*START BELOW ONLY WHEN ABOVE IS COMPLETE*-
 		*Attain Optiplex 3040 *COMPLETE*
-		*Setup filezilla server hosted on new Optiplex 3040.
+		*Setup filezilla hosted on new tower.
 			-Insert HTML doc to verify and compare builds to install application updates.
 		*Setup paths and local folders in msi builder(Advanced Installer).				
 		*Create a fight sequence.	
