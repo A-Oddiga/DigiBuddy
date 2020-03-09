@@ -1,19 +1,24 @@
 Currently a small window that has an egg, one button, and one progress bar. Level up mechanic and background optimization is functioning.
 The egg is clicked and then a creature(veemon) pops out of it.
-A 'Battle' button appears on the bottom right.
+A 'Train' button appears on the bottom right.
 Selection sounds implemented.
 Digibuddy hatched event sound implemented.
+Menu Select noises are in Implemented.
+Level up noises are implemented.
 
 TO BE ADDED NEXT:
+	*Current SubMenus: *Digi Status
+			   *Digi Collection
+			   *Background
 	*Express hunger based on creature anim.
 		-Hunger decreases as digibuddy is left unattended per hour. *In Progress*
 		-Hunger decreases as digibuddy per battle. *Complete*
 		-Create hunger animations
 	*Randomly creates food in the background to recover digibuddy hunger.
 		-Food appears in transparent rectangles *Complete*
-		-Randomize food and randomize locations in which it appears
+		-Randomize food and randomize locations in which it appears*Complete*
 		-Digibuddy turns left right and right depending on mouse position *Complete*
-		-Eaten food improves Digibuddy hunger along with unlocking more skills
+		-Eaten food improves Digibuddy hunger along with unlocking more skills *In Progress*
 	*Create a cracking egg animation.
 	As of -3/2/2020 *In Progress*
 	*Create an enemy creature class to fight against.
