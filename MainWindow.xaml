@@ -18,7 +18,7 @@
 
             <Rectangle x:Name="Left_side" HorizontalAlignment="Left" Height="253" Stroke="Black" VerticalAlignment="Top" Width="103" Margin="-8,0,0,0" MouseEnter="Left_side_MouseEnter" Fill="Black" Opacity="0" Grid.ColumnSpan="4"/>
 
-            <Image x:Name="Platform" Grid.Column="3" HorizontalAlignment="Left" Height="113" Margin="43,142,0,0" VerticalAlignment="Top" Width="188" Source="C:\Users\Adel Lombardi\Documents\DesktopBuddy\World\grass.png" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2">
+            <Image x:Name="Platform" Grid.Column="3" HorizontalAlignment="Left" Height="113" Margin="43,132,0,0" VerticalAlignment="Top" Width="188" Source="C:\Users\Adel Lombardi\Documents\DesktopBuddy\World\grass.png" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2">
                 <Image.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -29,9 +29,9 @@
                 </Image.RenderTransform>
             </Image>
 
-            <Rectangle x:Name="Right_side" Grid.ColumnSpan="2" Grid.Column="3" HorizontalAlignment="Left" Height="253" Margin="213,0,0,0" Stroke="Black" VerticalAlignment="Top" Width="112" Fill="Black" MouseEnter="Rectangle_MouseEnter" Opacity="0" Initialized="Right_side_Initialized" Focusable="True"/>
+            <Rectangle x:Name="Right_side" Grid.ColumnSpan="2" Grid.Column="3" HorizontalAlignment="Left" Height="253" Margin="213,0,0,0" Stroke="Black" VerticalAlignment="Top" Width="112" Fill="Black" MouseEnter="Rectangle_MouseEnter" Opacity="0" Initialized="Right_side_Initialized"/>
 
-            <Image x:Name="Egg" HorizontalAlignment="Left" Margin="80,33,0,220" Width="112" Source="C:\Users\Adel Lombardi\Documents\DesktopBuddy\Creatures\OriginalEgg.gif" Grid.Column="3" RenderTransformOrigin="0.5,0.5" MouseDown="Link_MouseDown">
+            <Image x:Name="Egg" HorizontalAlignment="Left" Margin="80,33,0,220" Width="112" Source="C:\Users\Adel Lombardi\Documents\DesktopBuddy\Creatures\OriginalEgg.gif" Grid.Column="3" RenderTransformOrigin="0.5,0.5" MouseDown="Link_MouseDown" Cursor="Hand">
                 <Image.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform ScaleY="1" ScaleX="1"/>
@@ -42,24 +42,30 @@
                 </Image.RenderTransform>
             </Image>
             <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="72,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Foreground="#FFFF7700" Background="Black" KeyDown="textBox_KeyDown" Grid.Column="3" TabIndex="25" AcceptsTab="True" Visibility="Hidden" IsEnabled="False"/>
-            <ProgressBar x:Name="EXP_Bar" Grid.ColumnSpan="4" HorizontalAlignment="Left" Height="20" Margin="-13,0,0,0" VerticalAlignment="Top" Width="109" Foreground="#FF3FFF2C" ValueChanged="EXP_Bar_ValueChanged" IsHitTestVisible="False" BorderBrush="#FF003AFF" FontFamily="SimSun-ExtB" Background="#FFB6B6B6"/>
+            <ProgressBar x:Name="EXP_Bar" Grid.ColumnSpan="4" HorizontalAlignment="Left" Height="20" Margin="-13,0,0,0" VerticalAlignment="Top" Width="109" Foreground="#FF2AAC71" ValueChanged="EXP_Bar_ValueChanged" IsHitTestVisible="False" BorderBrush="Black" FontFamily="SimSun-ExtB" Background="#FFBAC1C3" BorderThickness="2"/>
             <Label x:Name="Lvl_Label" Content="LVL: " Grid.Column="1" HorizontalAlignment="Left" Margin="10,0,0,349" VerticalAlignment="Bottom" RenderTransformOrigin="0.271,0.195"  Width="43" Height="32" Grid.ColumnSpan="3" FontFamily="SimSun-ExtB" FontSize="10" FontWeight="Bold"/>
             <Menu x:Name="menu" Grid.Column="1" HorizontalAlignment="Left" Height="22" Margin="5,220,0,0" VerticalAlignment="Top" Width="90" Grid.ColumnSpan="3">
-                <MenuItem x:Name="Customize" Header="      Menu" Height="22" Width="90" FontSize="14" FontFamily="Garamond" FontWeight="Bold" Background="#FF1B1B1B" BorderBrush="#FFF7A27A" Foreground="#FF8B5900" Click="Customize_Click" IsTabStop="False" SubmenuOpened="Customize_SubmenuOpened" >
-                    <MenuItem x:Name="Stats" Header="Digi Stats" Background="#FF2B2B2B" BorderBrush="#FF004ACD" Click="BackgroundMenu_Click"/>
-                    <MenuItem x:Name="Collection" Header="Digi Buddy Collection" Background="#FF2B2B2B" BorderBrush="#FF004ACD" Click="BackgroundMenu_Click"/>
-                    <MenuItem x:Name="BackgroundMenu" Header="Background" Background="#FF2B2B2B" BorderBrush="#FF004ACD" Click="BackgroundMenu_Click"/>
+                <MenuItem x:Name="Customize" Header="      Menu" Height="22" Width="90" FontSize="14" FontFamily="Garamond" FontWeight="Bold" Background="#FF1B1B1B" BorderBrush="#FFF7A27A" Foreground="#FF8B5900" Click="Customize_Click" IsTabStop="False" SubmenuOpened="Customize_SubmenuOpened" Cursor="Hand" >
+                    <MenuItem x:Name="Stats" Header="Digi Stats" Background="#FF2B2B2B" BorderBrush="#FF004ACD" />
+                    <MenuItem x:Name="Collection" Header="Digi Buddy Collection" Background="#FF2B2B2B" BorderBrush="#FF004ACD"/>
+                    <MenuItem x:Name="Buy_Food" Header="Buy Food (10 Coins)" Background="#FF2B2B2B" BorderBrush="#FF004ACD" Click="Buy_Food_Click"/>
                 </MenuItem>
             </Menu>
-            <Image x:Name="Creature" Grid.Column="3" HorizontalAlignment="Left" Height="100" Margin="80,171,0,0" VerticalAlignment="Top" Width="100"/>
-            <Button x:Name="Fight" Content="Train" Grid.Column="3" HorizontalAlignment="Left" Margin="213,221,0,0" VerticalAlignment="Top" Width="90" Height="20" Foreground="#FF8B5900" BorderBrush="#FFF7A27A" Background="#FF1B1B1B" FontFamily="Garamond" FontSize="14" FontWeight="Bold" IsCancel="True" Grid.ColumnSpan="2" Click="button_Click" Visibility="Hidden" LayoutUpdated="Battle_LayoutUpdated"/>
-            <ProgressBar x:Name="Hunger" Grid.Column="4" HorizontalAlignment="Left" Height="34" Margin="74,0,0,0" VerticalAlignment="Top" Width="22" Foreground="#FFFB5000" Value="81" Orientation="Vertical" LayoutUpdated="Hunger_LayoutUpdated" ValueChanged="Hunger_ValueChanged"/>
-            <Image x:Name="chicken" Grid.Column="4" HorizontalAlignment="Left" Height="27" Margin="39,5,0,0" VerticalAlignment="Top" Width="30" Source="C:\Users\Adel Lombardi\Documents\DesktopBuddy\Picture-Labels\Chicken-leg.png" LayoutUpdated="chicken_LayoutUpdated"/>
+            <Menu x:Name="menu2" Grid.Column="2" HorizontalAlignment="Left" Height="22" Margin="110,220,0,0" VerticalAlignment="Top" Width="90" Grid.ColumnSpan="3">
+                <MenuItem x:Name="Skill" Header="      Skills" Height="22" Width="90" FontSize="14" FontFamily="Garamond" FontWeight="Bold" Background="#FF1B1B1B" BorderBrush="#FF3597F9" Foreground="#FF249C00" Click="Customize_Click" IsTabStop="False" SubmenuOpened="Customize_SubmenuOpened" Cursor="Hand" >
+                    <MenuItem x:Name="Skill1" Header="Background" Background="#FF2B2B2B" BorderBrush="#FF004ACD" Click="BackgroundMenu_Click"/>
+                </MenuItem>
+            </Menu>
+            <Image x:Name="Creature" Grid.Column="3" HorizontalAlignment="Left" Height="100" Margin="80,171,0,0" VerticalAlignment="Top" Width="100" Cursor="Hand"/>
+            <Button x:Name="Fight" Content="Train" Grid.Column="3" HorizontalAlignment="Left" Margin="213,220,0,0" VerticalAlignment="Top" Width="90" Height="20" Foreground="#FF2A81FF" BorderBrush="#FF4BA8F5" Background="#FF2B2B2B" FontFamily="Garamond" FontSize="14" FontWeight="Bold" IsCancel="True" Grid.ColumnSpan="2" Click="button_Click" LayoutUpdated="Battle_LayoutUpdated" Visibility="Hidden" Cursor="Hand"/>
+            <ProgressBar x:Name="Hunger" Grid.Column="4" HorizontalAlignment="Left" Height="34" Margin="74,0,0,0" VerticalAlignment="Top" Width="22" Foreground="#FFBD7676" Orientation="Vertical" LayoutUpdated="Hunger_LayoutUpdated" ValueChanged="Hunger_ValueChanged" Value="100" Background="White"/>
             <Image x:Name="food2" Grid.Column="4" HorizontalAlignment="Left" Height="21" Margin="29,92,0,0" VerticalAlignment="Top" Width="26" Source="C:\Users\Adel Lombardi\Documents\DesktopBuddy\Picture-Labels\Chicken-leg.png" Visibility="Hidden" MouseLeftButtonDown="food2_MouseLeftButtonDown"/>
             <TextBlock x:Name="Alerts" Height="40" Grid.Column="3" Text="Hatch Me!" Margin="30 -280 0 0" Foreground="White" HorizontalAlignment="Center"/>
-            <Image x:Name="food1" Grid.Column="3" HorizontalAlignment="Left" Height="35" Margin="27,63,0,0" VerticalAlignment="Top" Width="26" Source="C:\Users\Adel Lombardi\Documents\DesktopBuddy\Picture-Labels\Chicken-leg.png" MouseLeftButtonDown="food1_MouseLeftButtonDown" LayoutUpdated="food1_LayoutUpdated" RenderTransformOrigin="0.423,0.429"/>
-            <Image x:Name="CoinLabel" Source="C:\Users\Adel Lombardi\Documents\DesktopBuddy\Picture-Labels\Coin.gif" Margin="29,40,138,304" Grid.Column="4"/>
-            <TextBlock x:Name="money" Text="000" FontSize="14" Foreground="Silver" FontWeight="Bold" Margin = "49,49,113,315" Grid.Column="4" FontFamily="HoloLens MDL2 Assets" RenderTransformOrigin="0.433,1.63" />
+            <Image x:Name="CoinLabel" Source="C:\Users\Adel Lombardi\Documents\DesktopBuddy\Picture-Labels\Coin.gif" Margin="39,44,128,315" Grid.Column="4" RenderTransformOrigin="2.267,0.479"/>
+            <TextBlock x:Name="money" Text="0" FontSize="14" Foreground="Silver" FontWeight="Bold" Margin = "65,47,101,318" Grid.Column="4"  RenderTransformOrigin="0.433,1.63" FontFamily="Courier New"/>
+            <Image x:Name="Coin" Source="C:\Users\Adel Lombardi\Documents\DesktopBuddy\Picture-Labels\Coin.gif"  Margin="0,63,0,293" Width="36" Height="35" Grid.Column="3" MouseLeftButtonDown="Coin_MouseLeftButtonDown" RenderTransformOrigin="1.22,0.553" LayoutUpdated="Coin_LayoutUpdated" MouseDown="Coin_MouseDown" Visibility="Hidden" Cursor="Hand"/>
+            <TextBlock x:Name="Eat" Grid.Column="1" Text=": " HorizontalAlignment="Left" Margin="18,175,0,190" Foreground="White" Grid.ColumnSpan="2"/>
+            <Image x:Name="food1" HorizontalAlignment="Left" Height="35" Margin="-8,175,0,0" VerticalAlignment="Top" Width="26" Source="C:\Users\Adel Lombardi\Documents\DesktopBuddy\Picture-Labels\Chicken-leg.png" MouseLeftButtonDown="food1_MouseLeftButtonDown" LayoutUpdated="food1_LayoutUpdated" RenderTransformOrigin="0.192,0.914" Cursor="Hand" Grid.ColumnSpan="2"/>
         </Grid>
     </Border>
 </Window>

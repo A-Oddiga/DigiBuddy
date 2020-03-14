@@ -26,19 +26,24 @@ namespace DesktopBuddy
   
     public partial class MainWindow : Window
     {
+        public int amount = 0;
         public string backgroundAnswer = "";
         public double maxExpinit = 99;
         public int level = 0;
+        public int foodNum = 0;
         Creature creature = new Creature();
         ScaleTransform flipTrans = new ScaleTransform();
         BitmapImage egg = new BitmapImage();
         BitmapImage coin = new BitmapImage();
+        BitmapImage actualCoin = new BitmapImage();
         BitmapImage creature_created = new BitmapImage();
         Select selectSound = new Select();
         Event eventSound = new Event();
         SoundPlayer select = new SoundPlayer();
         SoundPlayer event_occured = new SoundPlayer();
         Random randoEgg = new Random();
+        SoundPlayer lullaby = new SoundPlayer("C:\\Users\\Adel Lombardi\\Music\\Emotional-piano-song.wav");
+        
         public double MaxEXP
         {
             get { return maxExpinit; }
@@ -47,10 +52,13 @@ namespace DesktopBuddy
         public MainWindow()
         {
             InitializeComponent();
-            //SoundPlayer lullaby = new SoundPlayer("C:\\Users\\Adel Lombardi\\Music\\Emotional-piano-song.wav");
-            //lullaby.Play();         
+            //Food info
+            foodNum = 0;
+            Eat.Text += foodNum;
+            //Level info     
             level = 0;
-            Lvl_Label.Content = "LVL: 0";           
+            Lvl_Label.Content = "LVL: 0";     
+            //Set animation
             egg.BeginInit();
             egg.UriSource = new Uri("C:\\Users\\Adel Lombardi\\Documents\\DesktopBuddy\\Creatures\\OriginalEgg.gif");
             egg.EndInit();
@@ -59,15 +67,16 @@ namespace DesktopBuddy
             coin.UriSource = new Uri(@"C:\Users\Adel Lombardi\Documents\DesktopBuddy\Picture-Labels\Coin.gif");
             coin.EndInit();
             ImageBehavior.SetAnimatedSource(CoinLabel, coin);
+            actualCoin.BeginInit();
+            actualCoin.UriSource = new Uri(@"C:\Users\Adel Lombardi\Documents\DesktopBuddy\Picture-Labels\Coin.gif");
+            actualCoin.EndInit();
+            ImageBehavior.SetAnimatedSource(Coin, actualCoin);
+            //Set sounds
             select = selectSound.Noise;
             event_occured = eventSound.Noise;
-
-            if (food1.Visibility == Visibility.Visible)
-            {
-                Random rando = new Random();
-                food1.Margin = new Thickness(rando.Next(60, 100), 40, 0, 0);
-            }
-            BackgroundMenu.ToolTip = "Choose from the following:  \n*gray  \n*yellow \n *green \n *white \n*black";
+     
+            //ToolTips
+            Skill1.ToolTip = "Choose from the following:  \n*gray  \n*yellow \n *green \n *white \n*black";
         }
         #region Customize-Background
         private void BackgroundMenu_Click(object sender, RoutedEventArgs e)
@@ -154,11 +163,14 @@ namespace DesktopBuddy
         }
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            if(Hunger.Value >=2)
+            if(Hunger.Value >=10)
             {               
-                Hunger.Value -= 2;
-                EXP_Bar.Value += 9;
-                            
+                Hunger.Value -= 10;
+                EXP_Bar.Value += 9;                           
+            }
+            else if(Hunger.Value < 10)
+            {
+
             }
         }
         #endregion
@@ -201,7 +213,7 @@ namespace DesktopBuddy
             {
                 Creature.Margin = new Thickness(90, 90, 0, 210);
             }
-                      
+           
             ImageBehavior.SetAnimatedSource(Creature, creature_created);
             Alerts.Text = creature.Intro;                        
         }
@@ -242,7 +254,15 @@ namespace DesktopBuddy
 
         private void food1_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            Hunger.Value += 5;
+            if(Hunger.Value < 100)
+            {
+                Hunger.Value += 10;
+            }        
+            if(foodNum > 0)
+            {
+                foodNum -= 1;
+            }
+            Eat.Text = ": " + foodNum.ToString();
         }
 
         private void food2_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -252,14 +272,7 @@ namespace DesktopBuddy
 
         private void Hunger_LayoutUpdated(object sender, EventArgs e)
         {
-            if (Hunger.Value <= 80)
-            {               
-                food1.Visibility = Visibility.Visible;          
-            }
-            else if (Hunger.Value > 80)
-            {
-                food1.Visibility = Visibility.Hidden;
-            }
+ 
         }
 
         private void Hunger_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
@@ -272,17 +285,11 @@ namespace DesktopBuddy
            
         }
 
-        private void chicken_LayoutUpdated(object sender, EventArgs e)
-        {
-            
-        }
-
         private void food1_LayoutUpdated(object sender, EventArgs e)
         {
-            if (Hunger.Value > 80)
+            if (Hunger.Value <= 10)
             {
-                Random rando = new Random();
-                food1.Margin = new Thickness(rando.Next(30, 180), rando.Next(40, 170), 0, 0);
+               
             }
 
         }
@@ -291,8 +298,7 @@ namespace DesktopBuddy
         {
             if(Keyboard.IsKeyDown(Key.Escape))
             {
-                textBox.Visibility = Visibility.Hidden;
-            
+                textBox.Visibility = Visibility.Hidden;           
             }
         }
 
@@ -306,6 +312,40 @@ namespace DesktopBuddy
         {
             SoundPlayer menuSelect = new SoundPlayer(@"C:\Users\Adel Lombardi\Documents\DesktopBuddy\Selection Sounds\Menu_Select.wav");
             menuSelect.Play();
+        }
+        private void Coin_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {                     
+
+        }
+
+        private void Coin_LayoutUpdated(object sender, EventArgs e)
+        {
+            if (creature.IsHatched)
+            {
+                Coin.Visibility = Visibility.Visible;
+            }                            
+        }
+
+        private void Coin_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Random randoMoney = new Random();
+            Random rando = new Random();
+            Coin.Margin = new Thickness(rando.Next(-60, 180), rando.Next(-300, 60), 0, 0);
+            Coin.Visibility = Visibility.Hidden;
+            creature.CurrentMoney += amount;
+            amount += randoMoney.Next(1,5);
+            money.Text = amount.ToString();
+        }
+
+        private void Buy_Food_Click(object sender, RoutedEventArgs e)
+        {
+            if(amount >= 10)
+            {
+                foodNum += 1;
+                Eat.Text = ": " + foodNum.ToString();
+                amount -= 10;
+                money.Text = amount.ToString();
+            }
         }
     }
 }
